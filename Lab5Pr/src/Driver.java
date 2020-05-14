@@ -103,12 +103,18 @@ public class Driver {
      * @return false, если надо выходить (exit)
      */
     public boolean executeScript(String[] command) {
+        String oldFileName = "";
         if (command.length < 2){
             System.out.println("syntax: executeScript <filename>");
             return true;
         }
 
         String fileName = command[1];
+
+        if (!fileName.equals(oldFileName)) {
+            System.out.println("скрипт из указанного файла был вызван раннее");
+            return true;
+        }
 
         FileReader fr;
 
@@ -119,6 +125,7 @@ public class Driver {
             e.printStackTrace();
             return true;
         }
+        
         BufferedReader br = new BufferedReader(fr);
         String s;
 
@@ -142,7 +149,7 @@ public class Driver {
             IoHelper.in = temp;
             return true;
         }
-
+        oldFileName = fileName;
         IoHelper.in = temp;
         return true;
     }
