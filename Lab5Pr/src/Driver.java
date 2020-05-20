@@ -1,13 +1,13 @@
 import javafx.util.Pair;
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *класс для управления коллекцией
  */
 public class Driver {
     /**
-     *поле комманды для управления коллекцией
+     *поле команды для управления коллекцией
      */
     private BandList mbList;
     /**
@@ -23,6 +23,10 @@ public class Driver {
      */
     private String fileName;
 
+    /**
+     * поле для запоминания вызванных скриптов
+     */
+    private Set<String> calledScripts;
 
     /*
     public Driver() {
@@ -57,6 +61,7 @@ public class Driver {
         this.fileName = fileName;
         commandLogFileName = "log.txt";
         writeCommandLog = true;
+        calledScripts = new TreeSet<>();
     }
 
     /**
@@ -103,12 +108,21 @@ public class Driver {
      * @return false, если надо выходить (exit)
      */
     public boolean executeScript(String[] command) {
+
         if (command.length < 2){
             System.out.println("syntax: executeScript <filename>");
             return true;
         }
 
         String fileName = command[1];
+
+        if (this.calledScripts.contains(fileName)) {
+            System.out.println("infinite recursion detected");
+            return false;
+        } else {
+            this.calledScripts.add(fileName);
+        }
+
         FileReader fr;
 
         try {
@@ -116,6 +130,7 @@ public class Driver {
         } catch (FileNotFoundException e) {
             System.out.println("не найден файл скрипта");
             e.printStackTrace();
+            this.calledScripts.remove(fileName);
             return true;
         }
         
@@ -131,6 +146,7 @@ public class Driver {
                 System.out.println(">>>" + s);
                 if (!execution(s)) {
                     IoHelper.in = temp;
+                    this.calledScripts.remove(fileName);
                     return false;
                 }
             }
@@ -140,9 +156,12 @@ public class Driver {
         } catch (IOException ex) {
             System.out.println("error reading from file");
             IoHelper.in = temp;
+            this.calledScripts.remove(fileName);
             return true;
         }
+
         IoHelper.in = temp;
+        this.calledScripts.remove(fileName);
         return true;
     }
 
