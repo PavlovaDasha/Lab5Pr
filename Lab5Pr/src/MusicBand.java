@@ -1,13 +1,12 @@
-import javafx.util.Pair;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * классб описывающий Music Band
+ * класс, описывающий Music Band
  */
 public class MusicBand implements Comparable{
     /**
-     * поле индентификационный номер музыкальной банды
+     * поле идентификационный номер музыкальной банды
      */
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     /**
@@ -237,8 +236,8 @@ public class MusicBand implements Comparable{
     }
 
     /**
-     * метод, для получения значения поля индентификационный номер музыкальной банды
-     * @param id индентификационный номер музыкальной банды
+     * метод, для получения значения поля идентификационный номер музыкальной банды
+     * @param id идентификационный номер музыкальной банды
      */
     public void setId(int id) {this.id = id;}
     public Integer getId () {

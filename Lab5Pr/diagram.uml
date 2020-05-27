@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="549.5551096126096" y="1108.0">MusicBand</node>
+    <node x="810.4464316239317" y="526.0">MusicGenre</node>
+    <node x="535.6964316239317" y="494.0">Coordinates</node>
+    <node x="426.3983963258965" y="1545.0">BandList</node>
+    <node x="389.69643162393174" y="2138.0">Driver</node>
+    <node x="296.7246553446555" y="217.0">IoHelper</node>
+    <node x="156.31506299256318" y="791.0">Person</node>
+    <node x="474.19643162393174" y="2677.0">Main</node>
+    <node x="0.0" y="494.0">Location</node>
+    <node x="644.3611111111112" y="0.0">Pair</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="MusicGenre" target="IoHelper">
+      <point x="-87.33333333333326" y="-91.5" />
+      <point x="854.1130982905985" y="464.0" />
+      <point x="586.3913220113221" y="464.0" />
+      <point x="131.66666666666663" y="113.5" />
+    </edge>
+    <edge source="MusicBand" target="MusicGenre">
+      <point x="134.33333333333337" y="-178.5" />
+      <point x="885.3884429459431" y="1088.0" />
+      <point x="873.342840770341" y="1088.0" />
+      <point x="873.342840770341" y="766.0" />
+      <point x="854.1130982905984" y="766.0" />
+      <point x="-87.33333333333337" y="91.5" />
+    </edge>
+    <edge source="Driver" target="MusicBand">
+      <point x="89.71428571428567" y="-244.5" />
+      <point x="636.4107173382174" y="2108.0" />
+      <point x="909.8214316239317" y="2108.0" />
+      <point x="909.8214316239317" y="1515.0" />
+      <point x="902.1801096126096" y="1515.0" />
+      <point x="151.125" y="178.5" />
+    </edge>
+    <edge source="Person" target="Pair">
+      <point x="0.0" y="-123.5" />
+      <point x="274.8150629925632" y="766.0" />
+      <point x="255.5" y="766.0" />
+      <point x="255.5" y="157.0" />
+      <point x="663.207264957265" y="157.0" />
+      <point x="-30.15384615384619" y="58.5" />
+    </edge>
+    <edge source="BandList" target="Coordinates">
+      <point x="0.0" y="-266.5" />
+      <point x="570.8983963258966" y="1485.0" />
+      <point x="539.0551096126096" y="1485.0" />
+      <point x="539.0551096126096" y="766.0" />
+      <point x="574.6964316239317" y="766.0" />
+      <point x="-78.0" y="123.5" />
+    </edge>
+    <edge source="Person" target="IoHelper">
+      <point x="94.80000000000001" y="-123.5" />
+      <point x="369.6150629925632" y="766.0" />
+      <point x="371.94643162393174" y="766.0" />
+      <point x="371.94643162393174" y="474.0" />
+      <point x="375.7246553446555" y="474.0" />
+      <point x="-79.0" y="113.5" />
+    </edge>
+    <edge source="Driver" target="BandList">
+      <point x="0.0" y="-244.5" />
+      <point x="546.6964316239317" y="2118.0" />
+      <point x="570.8983963258966" y="2118.0" />
+      <point x="0.0" y="266.5" />
+    </edge>
+    <edge source="Driver" target="Person">
+      <point x="-134.5714285714286" y="-244.5" />
+      <point x="412.1250030525032" y="2118.0" />
+      <point x="64.06506299256318" y="2118.0" />
+      <point x="64.06506299256318" y="1088.0" />
+      <point x="180.01506299256317" y="1088.0" />
+      <point x="-94.80000000000001" y="123.5" />
+    </edge>
+    <edge source="Driver" target="IoHelper">
+      <point x="-89.71428571428578" y="-244.5" />
+      <point x="456.98214590964596" y="2108.0" />
+      <point x="415.8983963258965" y="2108.0" />
+      <point x="415.8983963258965" y="474.0" />
+      <point x="428.39132201132213" y="474.0" />
+      <point x="-26.33333333333337" y="113.5" />
+    </edge>
+    <edge source="Coordinates" target="IoHelper">
+      <point x="-78.0" y="-123.5" />
+      <point x="574.6964316239317" y="474.0" />
+      <point x="533.7246553446555" y="474.0" />
+      <point x="79.0" y="113.5" />
+    </edge>
+    <edge source="MusicBand" target="Person">
+      <point x="-134.33333333333337" y="-178.5" />
+      <point x="616.7217762792764" y="1078.0" />
+      <point x="369.61506299256325" y="1078.0" />
+      <point x="94.80000000000007" y="123.5" />
+    </edge>
+    <edge source="MusicBand" target="IoHelper">
+      <point x="-89.55555555555554" y="-178.5" />
+      <point x="661.4995540570542" y="1068.0" />
+      <point x="448.14132201132213" y="1068.0" />
+      <point x="448.14132201132213" y="474.0" />
+      <point x="481.0579886779888" y="474.0" />
+      <point x="26.333333333333314" y="113.5" />
+    </edge>
+    <edge source="Location" target="IoHelper">
+      <point x="81.66666666666669" y="-123.5" />
+      <point x="204.16666666666669" y="474.0" />
+      <point x="323.0579886779889" y="474.0" />
+      <point x="-131.66666666666663" y="113.5" />
+    </edge>
+    <edge source="Main" target="Driver">
+      <point x="-36.25" y="-26.5" />
+      <point x="510.44643162393174" y="2652.0" />
+      <point x="468.19643162393174" y="2652.0" />
+      <point x="-78.5" y="244.5" />
+    </edge>
+    <edge source="Driver" target="Pair">
+      <point x="134.57142857142856" y="-244.5" />
+      <point x="681.2678601953603" y="2118.0" />
+      <point x="1082.9464316239319" y="2118.0" />
+      <point x="1082.9464316239319" y="147.0" />
+      <point x="738.5918803418804" y="147.0" />
+      <point x="45.23076923076917" y="58.5" />
+    </edge>
+    <edge source="IoHelper" target="Pair">
+      <point x="79.0" y="-113.5" />
+      <point x="533.7246553446555" y="187.0" />
+      <point x="685.8226495726497" y="187.0" />
+      <point x="-7.538461538461547" y="58.5" />
+    </edge>
+    <edge source="MusicBand" target="Coordinates">
+      <point x="-44.777777777777715" y="-178.5" />
+      <point x="706.277331834832" y="1058.0" />
+      <point x="652.6964316239317" y="1058.0" />
+      <point x="0.0" y="123.5" />
+    </edge>
+    <edge source="BandList" target="MusicGenre">
+      <point x="128.44444444444446" y="-266.5" />
+      <point x="699.3428407703409" y="1525.0" />
+      <point x="1009.3630982905984" y="1525.0" />
+      <point x="1009.3630982905984" y="766.0" />
+      <point x="1028.779764957265" y="766.0" />
+      <point x="87.33333333333326" y="91.5" />
+    </edge>
+    <edge source="MusicGenre" target="Pair">
+      <point x="87.33333333333337" y="-91.5" />
+      <point x="1028.7797649572651" y="474.0" />
+      <point x="993.2595074370076" y="474.0" />
+      <point x="993.2595074370076" y="157.0" />
+      <point x="731.0534188034189" y="157.0" />
+      <point x="37.692307692307736" y="58.5" />
+    </edge>
+    <edge source="BandList" target="Location">
+      <point x="-128.44444444444446" y="-266.5" />
+      <point x="442.45395188145204" y="1525.0" />
+      <point x="75.06506299256318" y="1525.0" />
+      <point x="75.06506299256318" y="766.0" />
+      <point x="30.625" y="766.0" />
+      <point x="-91.875" y="123.5" />
+    </edge>
+    <edge source="Person" target="Location">
+      <point x="-94.80000000000004" y="-123.5" />
+      <point x="180.01506299256312" y="766.0" />
+      <point x="153.125" y="766.0" />
+      <point x="30.625" y="123.5" />
+    </edge>
+    <edge source="BandList" target="MusicBand">
+      <point x="64.22222222222217" y="-266.5" />
+      <point x="635.1206185481187" y="1505.0" />
+      <point x="700.6801096126096" y="1505.0" />
+      <point x="-50.375" y="178.5" />
+    </edge>
+    <edge source="BandList" target="Person">
+      <point x="-32.111111111111086" y="-266.5" />
+      <point x="538.7872852147855" y="1495.0" />
+      <point x="256.6150629925632" y="1495.0" />
+      <point x="256.6150629925632" y="1088.0" />
+      <point x="274.8150629925632" y="1088.0" />
+      <point x="0.0" y="123.5" />
+    </edge>
+    <edge source="MusicBand" target="Pair">
+      <point x="89.55555555555554" y="-178.5" />
+      <point x="840.6106651681653" y="1078.0" />
+      <point x="799.9464316239317" y="1078.0" />
+      <point x="799.9464316239317" y="177.0" />
+      <point x="715.9764957264958" y="177.0" />
+      <point x="22.61538461538464" y="58.5" />
+    </edge>
+    <edge source="Location" target="Pair">
+      <point x="0.0" y="-123.5" />
+      <point x="122.5" y="474.0" />
+      <point x="110.38136863136862" y="474.0" />
+      <point x="110.38136863136862" y="147.0" />
+      <point x="655.6688034188035" y="147.0" />
+      <point x="-37.692307692307736" y="58.5" />
+    </edge>
+    <edge source="Coordinates" target="Pair">
+      <point x="78.0" y="-123.5" />
+      <point x="730.6964316239317" y="474.0" />
+      <point x="704.5095074370076" y="474.0" />
+      <point x="704.5095074370076" y="197.0" />
+      <point x="700.8995726495727" y="197.0" />
+      <point x="7.538461538461547" y="58.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.19163636363636363" x="541.5" y="1365.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

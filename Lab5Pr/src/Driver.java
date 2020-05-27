@@ -1,4 +1,3 @@
-import javafx.util.Pair;
 import java.io.*;
 import java.util.*;
 
@@ -187,7 +186,7 @@ public class Driver {
     }
 
     /**
-     * метод для удаления элемента из коллекции по его индентификационному номеру
+     * метод для удаления элемента из коллекции по его идентификационному номеру
      * @param command введенная команда
      */
     public void removeById(String[] command) {
@@ -274,12 +273,14 @@ public class Driver {
             case "filter_by_number_of_participants":
                 filterByNumberOfParticipants(command);
                 break;
+            default:
+                System.out.println("введенная команда не соответствует требованиям");
         }
         return true;
     }
 
     /**
-     * метод, котрый выводит количество элементов коллекции, поле frontMan которых больше заданного
+     * метод, который выводит количество элементов коллекции, поле frontMan которых больше заданного
      */
     private void countGreaterThanFrontMan() {
         Pair<Boolean, Person> fmp = Person.input("front man");
@@ -332,7 +333,7 @@ public class Driver {
     }
 
     /**
-     * метод для изменения элемента коллекции, индентификационный номер котрого равен заданному
+     * метод для изменения элемента коллекции, идентификационный номер которого равен заданному
      * @param command введенная команда
      */
     public void updateById(String[] command) {
@@ -410,10 +411,15 @@ public class Driver {
         writeLog("");
 
         while(isRun) {
-            inputS = IoHelper.in.nextLine();
-            isRun = execution(inputS);
+                System.out.println("введите команду");
+                if (IoHelper.in.hasNextLine())
+                    inputS = IoHelper.in.nextLine();
+                else {
+                    System.out.println("end of file");
+                    break;
+                }
+                isRun = execution(inputS);
+                System.out.println();
         }
-
     }
-
 }

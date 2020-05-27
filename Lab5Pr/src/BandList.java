@@ -32,8 +32,8 @@ public class BandList {
 
     /**
      * метод, который находит Music Band с введеным индентификационным номером
-     * @param id индентификационный номер
-     * @return Music Band с введеным индентификационным номером или null
+     * @param id идентификационный номер
+     * @return Music Band с введеным идентификационным номером или null
      */
     public MusicBand findById(int id) {
         MusicBand found = null;
@@ -58,6 +58,7 @@ public class BandList {
         FileReader fr = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fr);
         String s;
+        int count = 0;
 
         while ((s = br.readLine()) != null) {
             String[] fields = s.split(";");
@@ -108,6 +109,7 @@ public class BandList {
                 }
                 res.add(new MusicBand(name, new Coordinates(x, y),
                         date, numberOfParticipants, genre, fm), id);
+                count += 1;
             } catch (NumberFormatException ex) {
                 System.out.println("в строке csv");
                 System.out.println(s);
@@ -118,6 +120,7 @@ public class BandList {
             }
         }
 
+        System.out.printf("collection Music Band contains %d objects\n", count);
         br.close();
         fr.close();
 
@@ -141,7 +144,7 @@ public class BandList {
     }
 
     /**
-     * метод для добавления нового элемента с генерацией индентификационного номера
+     * метод для добавления нового элемента с генерацией идентификационного номера
      * @param band добавляемый элемент
      */
     public void add(MusicBand band) {
@@ -152,7 +155,7 @@ public class BandList {
     /**
      * метод для добавления нового элемента
      * @param band добавляемый элемент
-     * @param id индентификационный номер
+     * @param id идентификационный номер
      */
     public void add(MusicBand band, int id) {
 
@@ -174,7 +177,7 @@ public class BandList {
     }
 
     /**
-     * метод для изменения элемента коллекции, индентификационный номер котрого равен заданному
+     * метод для изменения элемента коллекции, идентификационный номер котрого равен заданному
      * @param id индентификационный номер
      */
     public void update(int id) {
@@ -193,8 +196,8 @@ public class BandList {
     }
 
     /**
-     * метод для удаления элемента из коллекции по его индентификационному номеру
-     * @param id индентификационный номер
+     * метод для удаления элемента из коллекции по его идентификационному номеру
+     * @param id идентификационный номер
      */
     public void removeById(int id) {
         musicBandList.removeIf(m -> m.getId() == id);
