@@ -12,11 +12,11 @@ public class Driver {
     /**
      * поле имя файла для записи введеных команд
      */
-    private String commandLogFileName;
+    //private String commandLogFileName;
     /**
      * поле запись введеных комманд
      */
-    private boolean writeCommandLog;
+    //private boolean writeCommandLog;
     /**
      * поле имя файла
      */
@@ -48,8 +48,8 @@ public class Driver {
         try {
             mbList = BandList.loadFile(fileName);
         } catch (FileNotFoundException e) {
-            System.out.println("указанного файла не существует, создаём пустой BandList");
-            mbList = new BandList();
+            System.out.println("Указанного файла не существует. Попробуйте начать заново");
+            System.exit(-2);
         } catch (IOException e) {
             System.out.println("IOException при попытке открытия файла");
             System.out.println("выберите другой файл, программа завершает работу");
@@ -58,8 +58,8 @@ public class Driver {
         }
 
         this.fileName = fileName;
-        commandLogFileName = "log.txt";
-        writeCommandLog = true;
+        //commandLogFileName = "log.txt";
+        //writeCommandLog = true;
         calledScripts = new TreeSet<>();
     }
 
@@ -89,6 +89,7 @@ public class Driver {
      * метод для записи введеных команд
      * @param command введеная команда
      */
+    /*
     public void writeLog(String command) {
         FileWriter fileWriter = null;
         try {
@@ -100,7 +101,7 @@ public class Driver {
         printWriter.println(command);
         printWriter.close();
     }
-
+    */
     /**
      *метод для считывания и выполнения скрипта из указанного файла
      * @param command введеная команда
@@ -214,8 +215,8 @@ public class Driver {
     public boolean execution(String inputCommand) {
         String[] command = inputCommand.split(" ", 2);
 
-        if (writeCommandLog)
-            writeLog(inputCommand);
+        //if (writeCommandLog)
+            //writeLog(inputCommand);
 
         switch (command[0]) {
             case "help":
@@ -408,7 +409,7 @@ public class Driver {
         boolean isRun = true;
         String inputS;
 
-        writeLog("");
+        //writeLog("");
 
         while(isRun) {
                 System.out.println("введите команду");

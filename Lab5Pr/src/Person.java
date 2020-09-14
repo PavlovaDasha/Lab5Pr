@@ -85,7 +85,7 @@ public class Person implements Comparable {
 
         String name = line;
 
-        Pair<Boolean, LocalDate> dp = IoHelper.getLocalDate("birthday");
+        Pair<Boolean, LocalDate> dp = IoHelper.getLocalDate("birthday (dd.MM.yyyy)");
         if (!dp.getKey())
             return new Pair<>(false, null);
 
